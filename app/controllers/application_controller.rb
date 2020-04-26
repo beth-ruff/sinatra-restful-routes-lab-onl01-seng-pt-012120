@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.create(:name => params[:name], :ingredients => params[:ingredients], :cook_time => params[:cooktime])
   end 
   
-  get 'recipes/:id' do 
+  get '/recipes/:id' do 
     @recipe = Recipe.find(params[:id])
     erb :show 
   end 
